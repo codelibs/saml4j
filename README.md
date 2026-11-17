@@ -55,7 +55,7 @@ String metadata = sp.metadata();
 | `security.allow_deprecated_alg` | accept SHA-1 signatures (default `false`) |
 | `security.allow_rsa_1_5` | accept RSA 1.5 key transport (default `false`; OAEP only otherwise) |
 | `security.clock_drift`, `security.max_message_size` | seconds (120) and bytes (1048576) |
-| `security.requested_authncontext`, `security.requested_authncontextcomparison` | request an AuthnContext |
+| `security.requested_authncontext`, `security.requested_authncontextcomparison` | request an AuthnContext; the response's AuthnContext is not checked, so this is not an access control |
 | `security.signature_algorithm` | the full URI of `rsa-sha256` (default), `rsa-sha384` or `rsa-sha512` |
 | `strict` | only `true` is accepted; `debug` is accepted and ignored |
 

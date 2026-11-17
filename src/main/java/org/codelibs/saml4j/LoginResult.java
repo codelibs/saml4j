@@ -33,7 +33,8 @@ interface LoginResult permits LoginResult.Authenticated, LoginResult.Rejected {
      * @param nameId the subject
      * @param sessionIndex the SessionIndex of the authentication, or {@code null}
      * @param sessionNotOnOrAfter when the IdP session ends, or {@code null}
-     * @param attributes the attributes, in document order; values of an attribute that appears more than once are merged
+     * @param attributes the attributes, in document order; values of an attribute that appears more than once are merged, and a value that
+     *        is not plain text (it has an element inside) is left out
      * @param requestId the pending request ID the response answered
      */
     record Authenticated(NameId nameId, String sessionIndex, Instant sessionNotOnOrAfter, Map<String, List<String>> attributes,
@@ -44,7 +45,7 @@ interface LoginResult permits LoginResult.Authenticated, LoginResult.Rejected {
      * A login that was refused.
      *
      * @param reason the reason code
-     * @param detail a short, sanitized description for the log; never {@code null}
+     * @param detail a short description for the log, stripped of control characters and bounded in length but not escaped for HTML, and it can quote the sender's text; never {@code null}. Do not show it to the user: show the reason code
      */
     record Rejected(Reason reason, String detail) implements LoginResult {
     }
