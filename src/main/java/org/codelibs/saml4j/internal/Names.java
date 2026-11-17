@@ -23,36 +23,52 @@ import java.util.Set;
  */
 public final class Names {
 
+    /** SAML 2.0 assertion namespace. */
     public static final String NS_SAML = "urn:oasis:names:tc:SAML:2.0:assertion";
 
+    /** SAML 2.0 protocol namespace. */
     public static final String NS_SAMLP = "urn:oasis:names:tc:SAML:2.0:protocol";
 
+    /** XML Signature namespace. */
     public static final String NS_DS = "http://www.w3.org/2000/09/xmldsig#";
 
+    /** XML Encryption namespace. */
     public static final String NS_XENC = "http://www.w3.org/2001/04/xmlenc#";
 
+    /** XML Encryption 1.1 namespace. */
     public static final String NS_XENC11 = "http://www.w3.org/2009/xmlenc11#";
 
+    /** Exclusive XML canonicalization algorithm URI. */
     public static final String NS_EXC_C14N = "http://www.w3.org/2001/10/xml-exc-c14n#";
 
+    /** SAML status code for a successful response. */
     public static final String STATUS_SUCCESS = "urn:oasis:names:tc:SAML:2.0:status:Success";
 
+    /** Bearer subject confirmation method. */
     public static final String CM_BEARER = "urn:oasis:names:tc:SAML:2.0:cm:bearer";
 
+    /** HTTP-POST binding. */
     public static final String BINDING_POST = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST";
 
+    /** HTTP-Redirect binding. */
     public static final String BINDING_REDIRECT = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect";
 
+    /** Unspecified NameID format. */
     public static final String NAMEID_UNSPECIFIED = "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified";
 
+    /** RSA-SHA1 signature method (deprecated). */
     public static final String RSA_SHA1 = "http://www.w3.org/2000/09/xmldsig#rsa-sha1";
 
+    /** RSA-SHA256 signature method. */
     public static final String RSA_SHA256 = "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256";
 
+    /** RSA-SHA384 signature method. */
     public static final String RSA_SHA384 = "http://www.w3.org/2001/04/xmldsig-more#rsa-sha384";
 
+    /** RSA-SHA512 signature method. */
     public static final String RSA_SHA512 = "http://www.w3.org/2001/04/xmldsig-more#rsa-sha512";
 
+    /** SHA-1 digest method (deprecated). */
     public static final String SHA1 = "http://www.w3.org/2000/09/xmldsig#sha1";
 
     /** Signature methods accepted in an XML signature. */
