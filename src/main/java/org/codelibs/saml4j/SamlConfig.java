@@ -387,122 +387,218 @@ public final class SamlConfig {
         }
     }
 
-    /** @return the entity ID of the identity provider */
+    /**
+     * Returns the entity ID of the identity provider.
+     *
+     * @return the entity ID of the identity provider
+     */
     public String idpEntityId() {
         return idpEntityId;
     }
 
-    /** @return the single sign-on URL of the identity provider */
+    /**
+     * Returns the single sign-on URL of the identity provider.
+     *
+     * @return the single sign-on URL of the identity provider
+     */
     public String idpSingleSignOnServiceUrl() {
         return idpSsoUrl;
     }
 
-    /** @return the single logout URL of the identity provider, or {@code null} */
+    /**
+     * Returns the single logout URL of the identity provider, or {@code null}.
+     *
+     * @return the single logout URL of the identity provider, or {@code null}
+     */
     public String idpSingleLogoutServiceUrl() {
         return idpSloUrl;
     }
 
-    /** @return the certificates that may sign for the identity provider */
+    /**
+     * Returns the certificates that may sign for the identity provider.
+     *
+     * @return the certificates that may sign for the identity provider
+     */
     public List<X509Certificate> idpCertificates() {
         return idpCerts;
     }
 
-    /** @return the entity ID of this service provider */
+    /**
+     * Returns the entity ID of this service provider.
+     *
+     * @return the entity ID of this service provider
+     */
     public String spEntityId() {
         return spEntityId;
     }
 
-    /** @return the assertion consumer service URL */
+    /**
+     * Returns the assertion consumer service URL.
+     *
+     * @return the assertion consumer service URL
+     */
     public String assertionConsumerServiceUrl() {
         return acsUrl;
     }
 
-    /** @return the single logout service URL, or {@code null} */
+    /**
+     * Returns the single logout service URL, or {@code null}.
+     *
+     * @return the single logout service URL, or {@code null}
+     */
     public String singleLogoutServiceUrl() {
         return slsUrl;
     }
 
-    /** @return the NameID format requested */
+    /**
+     * Returns the NameID format requested.
+     *
+     * @return the NameID format requested
+     */
     public String nameIdFormat() {
         return nameIdFormat;
     }
 
-    /** @return the certificate of this service provider, or {@code null} */
+    /**
+     * Returns the certificate of this service provider, or {@code null}.
+     *
+     * @return the certificate of this service provider, or {@code null}
+     */
     public X509Certificate spCertificate() {
         return spCert;
     }
 
-    /** @return the private key of this service provider, or {@code null} */
+    /**
+     * Returns the private key of this service provider, or {@code null}.
+     *
+     * @return the private key of this service provider, or {@code null}
+     */
     public PrivateKey spPrivateKey() {
         return spKey;
     }
 
-    /** @return whether AuthnRequests are signed */
+    /**
+     * Returns whether AuthnRequests are signed.
+     *
+     * @return whether AuthnRequests are signed
+     */
     public boolean authnRequestSigned() {
         return authnRequestSigned;
     }
 
-    /** @return whether the Response itself must be signed */
+    /**
+     * Returns whether the Response itself must be signed.
+     *
+     * @return whether the Response itself must be signed
+     */
     public boolean wantMessagesSigned() {
         return wantMessagesSigned;
     }
 
-    /** @return whether the Assertion itself must be signed */
+    /**
+     * Returns whether the Assertion itself must be signed.
+     *
+     * @return whether the Assertion itself must be signed
+     */
     public boolean wantAssertionsSigned() {
         return wantAssertionsSigned;
     }
 
-    /** @return whether the Assertion must be encrypted */
+    /**
+     * Returns whether the Assertion must be encrypted.
+     *
+     * @return whether the Assertion must be encrypted
+     */
     public boolean wantAssertionsEncrypted() {
         return wantAssertionsEncrypted;
     }
 
-    /** @return whether logout messages must be signed */
+    /**
+     * Returns whether logout messages must be signed.
+     *
+     * @return whether logout messages must be signed
+     */
     public boolean wantLogoutSigned() {
         return wantLogoutSigned;
     }
 
-    /** @return whether SHA-1 based algorithms are accepted */
+    /**
+     * Returns whether SHA-1 based algorithms are accepted.
+     *
+     * @return whether SHA-1 based algorithms are accepted
+     */
     public boolean allowDeprecatedAlg() {
         return allowDeprecatedAlg;
     }
 
-    /** @return whether RSA 1.5 key transport is accepted */
+    /**
+     * Returns whether RSA 1.5 key transport is accepted.
+     *
+     * @return whether RSA 1.5 key transport is accepted
+     */
     public boolean allowRsa15() {
         return allowRsa15;
     }
 
-    /** @return the clock drift tolerated, in seconds */
+    /**
+     * Returns the clock drift tolerated, in seconds.
+     *
+     * @return the clock drift tolerated, in seconds
+     */
     public int clockDriftSeconds() {
         return clockDriftSeconds;
     }
 
-    /** @return the largest decoded message accepted, in bytes */
+    /**
+     * Returns the largest decoded message accepted, in bytes.
+     *
+     * @return the largest decoded message accepted, in bytes
+     */
     public int maxMessageSize() {
         return maxMessageSize;
     }
 
-    /** @return the requested AuthnContextClassRef, or {@code null} */
+    /**
+     * Returns the requested AuthnContextClassRef, or {@code null}.
+     *
+     * @return the requested AuthnContextClassRef, or {@code null}
+     */
     public String requestedAuthnContext() {
         return requestedAuthnContext;
     }
 
-    /** @return the comparison for the requested AuthnContext */
+    /**
+     * Returns the comparison for the requested AuthnContext.
+     *
+     * @return the comparison for the requested AuthnContext
+     */
     public String requestedAuthnContextComparison() {
         return requestedAuthnContextComparison;
     }
 
-    /** @return the signature algorithm URI used for outgoing signatures */
+    /**
+     * Returns the signature algorithm URI used for outgoing signatures.
+     *
+     * @return the signature algorithm URI used for outgoing signatures
+     */
     public String signatureAlgorithm() {
         return signatureAlgorithm;
     }
 
-    /** @return the clock */
+    /**
+     * Returns the clock.
+     *
+     * @return the clock
+     */
     public Clock clock() {
         return clock;
     }
 
-    /** @return whether this configuration can only be used to produce metadata */
+    /**
+     * Returns whether this configuration can only be used to produce metadata.
+     *
+     * @return whether this configuration can only be used to produce metadata
+     */
     public boolean metadataOnly() {
         return metadataOnly;
     }
@@ -561,25 +657,45 @@ public final class SamlConfig {
         private Builder() {
         }
 
-        /** @param v the IdP entity ID @return this */
+        /**
+         * Sets the IdP entity ID.
+         *
+         * @param v the IdP entity ID
+         * @return this builder
+         */
         public Builder idpEntityId(final String v) {
             idpEntityId = v;
             return this;
         }
 
-        /** @param v the IdP single sign-on URL @return this */
+        /**
+         * Sets the IdP single sign-on URL.
+         *
+         * @param v the IdP single sign-on URL
+         * @return this builder
+         */
         public Builder idpSingleSignOnServiceUrl(final String v) {
             idpSsoUrl = v;
             return this;
         }
 
-        /** @param v the IdP single logout URL, or {@code null} @return this */
+        /**
+         * Sets the IdP single logout URL, or {@code null}.
+         *
+         * @param v the IdP single logout URL, or {@code null}
+         * @return this builder
+         */
         public Builder idpSingleLogoutServiceUrl(final String v) {
             idpSloUrl = v;
             return this;
         }
 
-        /** @param c a certificate that may sign for the IdP @return this */
+        /**
+         * Sets a certificate that may sign for the IdP.
+         *
+         * @param c a certificate that may sign for the IdP
+         * @return this builder
+         */
         public Builder addIdpCertificate(final X509Certificate c) {
             if (c == null) {
                 throw new SamlConfigException("an identity provider certificate is required");
@@ -588,115 +704,210 @@ public final class SamlConfig {
             return this;
         }
 
-        /** @param v the SP entity ID @return this */
+        /**
+         * Sets the SP entity ID.
+         *
+         * @param v the SP entity ID
+         * @return this builder
+         */
         public Builder spEntityId(final String v) {
             spEntityId = v;
             return this;
         }
 
-        /** @param v the assertion consumer service URL @return this */
+        /**
+         * Sets the assertion consumer service URL.
+         *
+         * @param v the assertion consumer service URL
+         * @return this builder
+         */
         public Builder assertionConsumerServiceUrl(final String v) {
             acsUrl = v;
             return this;
         }
 
-        /** @param v the single logout service URL, or {@code null} @return this */
+        /**
+         * Sets the single logout service URL, or {@code null}.
+         *
+         * @param v the single logout service URL, or {@code null}
+         * @return this builder
+         */
         public Builder singleLogoutServiceUrl(final String v) {
             slsUrl = v;
             return this;
         }
 
-        /** @param v the NameID format, or {@code null} for unspecified @return this */
+        /**
+         * Sets the NameID format, or {@code null} for unspecified.
+         *
+         * @param v the NameID format, or {@code null} for unspecified
+         * @return this builder
+         */
         public Builder nameIdFormat(final String v) {
             nameIdFormat = v;
             return this;
         }
 
-        /** @param c the SP certificate @return this */
+        /**
+         * Sets the SP certificate.
+         *
+         * @param c the SP certificate
+         * @return this builder
+         */
         public Builder spCertificate(final X509Certificate c) {
             spCert = c;
             return this;
         }
 
-        /** @param k the SP private key @return this */
+        /**
+         * Sets the SP private key.
+         *
+         * @param k the SP private key
+         * @return this builder
+         */
         public Builder spPrivateKey(final PrivateKey k) {
             spKey = k;
             return this;
         }
 
-        /** @param v whether to sign AuthnRequests @return this */
+        /**
+         * Sets whether to sign AuthnRequests.
+         *
+         * @param v whether to sign AuthnRequests
+         * @return this builder
+         */
         public Builder authnRequestSigned(final boolean v) {
             authnRequestSigned = v;
             return this;
         }
 
-        /** @param v whether the Response must be signed @return this */
+        /**
+         * Sets whether the Response must be signed.
+         *
+         * @param v whether the Response must be signed
+         * @return this builder
+         */
         public Builder wantMessagesSigned(final boolean v) {
             wantMessagesSigned = v;
             return this;
         }
 
-        /** @param v whether the Assertion must be signed @return this */
+        /**
+         * Sets whether the Assertion must be signed.
+         *
+         * @param v whether the Assertion must be signed
+         * @return this builder
+         */
         public Builder wantAssertionsSigned(final boolean v) {
             wantAssertionsSigned = v;
             return this;
         }
 
-        /** @param v whether the Assertion must be encrypted @return this */
+        /**
+         * Sets whether the Assertion must be encrypted.
+         *
+         * @param v whether the Assertion must be encrypted
+         * @return this builder
+         */
         public Builder wantAssertionsEncrypted(final boolean v) {
             wantAssertionsEncrypted = v;
             return this;
         }
 
-        /** @param v whether logout messages must be signed @return this */
+        /**
+         * Sets whether logout messages must be signed.
+         *
+         * @param v whether logout messages must be signed
+         * @return this builder
+         */
         public Builder wantLogoutSigned(final boolean v) {
             wantLogoutSigned = v;
             return this;
         }
 
-        /** @param v whether SHA-1 based algorithms are accepted @return this */
+        /**
+         * Sets whether SHA-1 based algorithms are accepted.
+         *
+         * @param v whether SHA-1 based algorithms are accepted
+         * @return this builder
+         */
         public Builder allowDeprecatedAlg(final boolean v) {
             allowDeprecatedAlg = v;
             return this;
         }
 
-        /** @param v whether RSA 1.5 key transport is accepted @return this */
+        /**
+         * Sets whether RSA 1.5 key transport is accepted.
+         *
+         * @param v whether RSA 1.5 key transport is accepted
+         * @return this builder
+         */
         public Builder allowRsa15(final boolean v) {
             allowRsa15 = v;
             return this;
         }
 
-        /** @param v the clock drift in seconds @return this */
+        /**
+         * Sets the clock drift in seconds.
+         *
+         * @param v the clock drift in seconds
+         * @return this builder
+         */
         public Builder clockDriftSeconds(final int v) {
             clockDriftSeconds = v;
             return this;
         }
 
-        /** @param v the largest decoded message in bytes @return this */
+        /**
+         * Sets the largest decoded message in bytes.
+         *
+         * @param v the largest decoded message in bytes
+         * @return this builder
+         */
         public Builder maxMessageSize(final int v) {
             maxMessageSize = v;
             return this;
         }
 
-        /** @param v the AuthnContextClassRef to request, or {@code null} @return this */
+        /**
+         * Sets the AuthnContextClassRef to request, or {@code null}.
+         *
+         * @param v the AuthnContextClassRef to request, or {@code null}
+         * @return this builder
+         */
         public Builder requestedAuthnContext(final String v) {
             requestedAuthnContext = v;
             return this;
         }
 
-        /** @param v exact, minimum, maximum or better @return this */
+        /**
+         * Sets the comparison method for the requested AuthnContext: exact, minimum, maximum or better.
+         *
+         * @param v exact, minimum, maximum or better
+         * @return this builder
+         */
         public Builder requestedAuthnContextComparison(final String v) {
             requestedAuthnContextComparison = v;
             return this;
         }
 
-        /** @param v the outgoing signature algorithm URI @return this */
+        /**
+         * Sets the outgoing signature algorithm URI.
+         *
+         * @param v the outgoing signature algorithm URI
+         * @return this builder
+         */
         public Builder signatureAlgorithm(final String v) {
             signatureAlgorithm = v;
             return this;
         }
 
-        /** @param v the clock, for tests @return this */
+        /**
+         * Sets the clock, for tests.
+         *
+         * @param v the clock, for tests
+         * @return this builder
+         */
         public Builder clock(final Clock v) {
             clock = v;
             return this;

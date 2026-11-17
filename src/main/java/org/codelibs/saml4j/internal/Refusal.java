@@ -25,6 +25,7 @@ public final class Refusal extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
+    /** The reason code. */
     private final Reason reason;
 
     /**
