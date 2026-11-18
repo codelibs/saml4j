@@ -561,6 +561,9 @@ public final class SamlConfig {
     /**
      * Returns the requested AuthnContextClassRef, or {@code null}.
      *
+     * <p>It is only a request in the AuthnRequest, which the user's browser carries and can change. The library does not
+     * compare the AuthnContext of the response with it, so it is not an access control.</p>
+     *
      * @return the requested AuthnContextClassRef, or {@code null}
      */
     public String requestedAuthnContext() {

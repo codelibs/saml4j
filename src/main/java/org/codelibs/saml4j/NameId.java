@@ -18,6 +18,9 @@ package org.codelibs.saml4j;
 /**
  * The NameID of a subject.
  *
+ * <p>The value is exactly the text of the verified element: it is not trimmed, case-folded or otherwise normalized, here
+ * or when a logout message is matched against a session. Two values that differ only in white space are two subjects.</p>
+ *
  * @param value the identifier, never blank
  * @param format the format URI, or {@code null}
  * @param nameQualifier the NameQualifier, or {@code null}
